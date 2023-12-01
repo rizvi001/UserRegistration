@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:home="clr-namespace:Task1.Views.HomePage"
+    xmlns:profile="clr-namespace:Task1.Views.ProfilePage"
+    xmlns:alluser="clr-namespace:Task1.Views.AllUser"
+    x:Class="Task1.Views.HomeTapped.HomeTapped"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"    
+    BarBackground="#282A2A"
+    BarTextColor="White"
+    NavigationPage.HasNavigationBar="False"
+    SelectedTabColor="Orange"
+    UnselectedTabColor="LightGray">
+    
+    <home:HomePage Title="Home" IconImageSource="Home.png" />
+    <alluser:AllUser Title="AllUsers" IconImageSource="team.png" />
+    <profile:ProfilePage Title="Profile" IconImageSource="profile.png" />
+
+</TabbedPage>
+

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:local="clr-namespace:Task1.CustomControl"
+    ios:Page.UseSafeArea="true"
+    x:Class="Task1.Views.ProfilePage.ProfilePage">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              Margin="10,10">
+              <!--home-->
+              <Grid Grid.Row="0" >
+
+                    <ImageButton
+                        Source="MasterDetail.png"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="ImageButton_Clicked"
+                        BackgroundColor="Transparent"
+                    />
+                    <!--Profile-->
+                    <Label 
+                        Text="Profile"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+                    <!--Name-->
+                    <Grid Grid.Row="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout Margin="10">
+                          <Label Text="Name"/>
+                          <Label Text="{Binding Name}" FontAttributes="Bold" />
+                      </StackLayout>
+
+                    </Grid>
+                     <!--Email-->
+                    <Grid Grid.Row="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        >
+
+                      <StackLayout Margin="10">
+                          <Label Text="Email"/>
+                           <Label Text="{Binding Email}" FontAttributes="Bold" />
+                      </StackLayout>
+                    </Grid>
+                     <!--Gender-->
+                    <Grid Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout Margin="10">
+                          <Label Text="Gender"/>
+                           <Label Text="{Binding Gender}" FontAttributes="Bold" />
+                      </StackLayout>
+                    </Grid>
+                     <!--Phone-->
+                    <Grid Grid.Row="4"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout Margin="10">
+                          <Label Text="Phone"/>
+                         <Label Text="{Binding Phone}" FontAttributes="Bold" />
+                      </StackLayout>
+                    </Grid>
+                     <!--Age-->
+                    <Grid Grid.Row="5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout Margin="10">
+                          <Label Text="Age"/>
+                          <Label Text="{Binding Age}" FontAttributes="Bold" />
+                      </StackLayout>
+                    </Grid>
+                     <!--DOB-->
+                    <Grid Grid.Row="6"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout Margin="10">
+                          <Label Text="Date"/>
+                          <Label Text="{Binding DOB}" FontAttributes="Bold" />
+                      </StackLayout>
+                    </Grid>
+                    <!--Update Button-->
+                     <Button
+                        Grid.Row="7"
+                        Text="Upadate Password"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        BackgroundColor="Gold"
+                        WidthRequest="350"
+                        CornerRadius="10"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Command="{Binding ChangeCommand}"
+                     />
+              </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

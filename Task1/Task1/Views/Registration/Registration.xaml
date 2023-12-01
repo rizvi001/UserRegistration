@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Task1.CustomControl"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    x:Class="Task1.Views.Registration.Registration">
+    <ContentPage.Content>
+         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#F3F3F3" Padding="0,20,0,20">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15" >
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--VagaLogo-->
+                <Grid
+                        Grid.Row="0"
+                        RowDefinitions="Auto,Auto">
+                    <Image
+                        Grid.Row="0"
+                        Source="VagaLogo"
+                        Aspect="AspectFit"
+                    />
+                    <Label
+                        Grid.Row="1"
+                        Text="Registration"
+                        FontSize="22"
+                        TextColor="Black"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                    />
+                </Grid>
+
+            <!--Name Entry-->
+            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Image Source="name.png" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+                <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <local:CustomEntry Placeholder="Name" Text="{Binding Name}" PlaceholderColor="Black" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                </Grid>
+            </Grid>
+                <!--Id-->
+                
+                <!--Email-->
+                <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Image Source="email.png" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <local:CustomEntry Placeholder="Work Email" Text="{Binding Email}" Keyboard="Email" PlaceholderColor="Black" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </Grid>
+                <!--Phone-->
+                <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Image Source="phone.png" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <local:CustomEntry Placeholder="Phone" Text="{Binding Phone}" PlaceholderColor="Black" Keyboard="Telephone" MaxLength="10" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </Grid>
+                
+                <Grid Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                       <Picker Title="Select Gender"><Picker.Items>
+                           <x:String>Male</x:String>
+                           <x:String>Female</x:String>
+                       </Picker.Items></Picker>
+                    </Grid>
+                </Grid>
+                
+                <!--Password-->
+                <Grid Grid.Row="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Image Source="passcode.png" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <local:CustomEntry Placeholder="Password" Text="{Binding  Password}"  PlaceholderColor="Black" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </Grid>
+
+                <!--Age-->
+                <Grid Grid.Row="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Image Source="passcode.png" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <local:CustomEntry Placeholder="Age" Text="{Binding  Age}" Keyboard="Numeric" MaxLength="2" PlaceholderColor="Black" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </Grid>
+              <!--  DOB Field  -->
+                <Grid Grid.Row="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="30,0,30,0">
+                    <Frame HasShadow="false" Padding="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DOBEntry_Tabbed"/>
+                        </Frame.GestureRecognizers>
+                        <local:CustomEntry
+                            x:Name="DOBEntry"
+                            Margin="12,0,0,0"
+                            FontSize="14"
+                            IsEnabled="False"
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="True"
+                            Text="{Binding DOB}"
+                            Placeholder="Date Of Birth"
+                            PlaceholderColor="#8B8B8B"
+                            TextColor="#000000"
+                            VerticalOptions="CenterAndExpand">
+                        </local:CustomEntry>
+                    </Frame>
+             
+
+                    <!--  picker  -->
+                    <DatePicker
+                        x:Name="DOBPicker"
+                       IsVisible="False"
+                        DateSelected="DOBPicker_DateSelected"
+                        MaximumDate="2023/10/31"
+                        MinimumDate="1975/01/01"
+                    />
+
+                </Grid>
+
+
+
+                <!--Submit Buttton-->
+               <Button
+                      Grid.Row="8"
+                      Text="Submit"
+                      FontSize="20"
+                      BackgroundColor="#FFC100"
+                      TextColor="Black"
+                      FontAttributes="Bold"
+                      Command="{Binding LoginCommand}"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      WidthRequest="380"
+                      HeightRequest="50"
+                      Margin="10"
+                      CornerRadius="10" 
+               /> 
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

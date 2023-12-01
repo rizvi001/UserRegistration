@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodels="clr-namespace:Task1.ViewModels" xmlns:local="clr-namespace:Task1.CustomControl"
+    x:DataType="viewmodels:EditUserViewModel"
+    ios:Page.UseSafeArea="true"
+    x:Class="Task1.Views.EditUser.EditUser">
+    <ContentPage.Content>
+         <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              Margin="10,10">
+
+              <!--Update Password-->
+              <Grid Grid.Row="0" >
+
+                    <ImageButton
+                        Source="Arrow.png"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="ImageButton_Clicked"
+                        BackgroundColor="Transparent"
+                    />
+
+                    <Label 
+                        Text="Edit User"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+              </Grid>
+
+             <Grid Grid.Row="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout>
+                          <Label Text="Name"/>
+                          <local:CustomEntry  Text="{Binding UserInfo.Name}"/>
+                      </StackLayout>
+
+             </Grid>
+
+                  
+
+                   <Grid Grid.Row="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout>
+                          <Label Text="Gender"/>
+                          <local:CustomEntry  Text="{Binding UserInfo.Gender}"/>
+                      </StackLayout>
+                  </Grid>
+
+                   <Grid Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout>
+                          <Label Text="Phone"/>
+                          <local:CustomEntry  Text="{Binding UserInfo.Phone}"/>
+                      </StackLayout>
+                  </Grid>
+
+                   <Grid Grid.Row="4"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout>
+                          <Label Text="Age"/>
+                          <local:CustomEntry  Text="{Binding UserInfo.Age}"/>
+                      </StackLayout>
+                  </Grid>
+
+                   <Grid Grid.Row="5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                      <StackLayout>
+                          <Label Text="DOB"/>
+                          <local:CustomEntry Text="{Binding UserInfo.DOB}"/>
+                      </StackLayout>
+                  </Grid>
+
+                  <Button
+                      Grid.Row="6"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      Text="Update"
+                      FontAttributes="Bold"
+                      TextColor="Black"
+                      BackgroundColor="Gold"
+                      WidthRequest="350"
+                      Command="{Binding UpdateCommand}"
+
+                  />
+
+              
+         </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
+

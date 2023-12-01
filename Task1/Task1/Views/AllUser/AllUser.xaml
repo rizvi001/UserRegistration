@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    x:Class="Task1.Views.AllUser.AllUser">
+    <ContentPage.Content>
+         
+         <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              RowDefinitions="Auto,*"
+              Margin="10,10">
+
+              <!--home-->
+              <Grid Grid.Row="0" >
+                    <ImageButton
+                        Source="MasterDetail.png"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="ImageButton_Clicked"
+                    />
+
+                    <Label 
+                        Text="All User"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+              </Grid>
+
+            
+
+             <Grid Grid.Row="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                   
+                        <CollectionView ItemsLayout="VerticalList"
+                                ItemsSource="{Binding Users}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                        <Frame CornerRadius="5" BorderColor="LightGray" Margin="10">
+                                            <Grid ColumnDefinitions="95*,5*">
+                                                <StackLayout Grid.Column="0">
+                                                    <Label Text="ID:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding ID}"/>
+                                                     <Label Text="Name:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Name}"/>
+                                                     <Label Text="Email:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Email}"/>
+                                                     <Label Text="Phone:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Phone}"/>
+                                                     <Label Text="Age:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Age}"/>
+                                                     <Label Text="Gender:" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Gender}"/>
+                                                     <Label Text="Date of Birth:" FontAttributes="Bold"/>
+                                                     <Label Text="{Binding DOB}"/>
+                                                </StackLayout>
+
+                                                <StackLayout Grid.Column="1">
+                                                    <ImageButton Source="edit.jpg" Aspect="AspectFit" Clicked="ImageButton_Clicked_1"/>
+                                                    <ImageButton Source="delete.png" Aspect="AspectFit" Clicked="ImageButton_Clicked_2"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+            </Grid>
+         </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
+

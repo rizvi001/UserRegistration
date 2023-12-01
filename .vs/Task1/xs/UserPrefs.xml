@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{C90573B3-5918-4808-BF64-1C60FF284F47}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/dr.mac/Projects/Vegabond/Task1/Task1/Task1/Task1/Views/AllUser/AllUser.xaml.cs" relfile="Task1/Task1/Views/AllUser/AllUser.xaml.cs" line="60" column="1" />
+      <Breakpoint file="/Users/dr.mac/Projects/Vegabond/Task1/Task1/Task1/Task1/Views/AllUser/AllUser.xaml.cs" relfile="Task1/Task1/Views/AllUser/AllUser.xaml.cs" line="61" column="1" />
+      <Breakpoint file="/Users/dr.mac/Projects/Vegabond/Task1/Task1/Task1/Task1/ViewModels/EditUserViewModel.cs" relfile="Task1/Task1/ViewModels/EditUserViewModel.cs" line="22" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/Task1/ViewModels/RegistrationViewModel.cs">
+    <Files>
+      <File FileName="Task1/Task1/ViewModels/AllUserViewModel.cs" />
+      <File FileName="Task1/Task1/Views/AllUser/AllUser.xaml" />
+      <File FileName="Task1/Task1/Views/AllUser/AllUser.xaml.cs" />
+      <File FileName="Task1/Task1/Model/UserModel.cs" />
+      <File FileName="Task1/Task1/Views/EditUser/EditUser.xaml.cs" />
+      <File FileName="Task1/Task1/Views/UpdatePassword/UpdatePassword.xaml" />
+      <File FileName="Task1/Task1/Views/EditUser/EditUser.xaml" />
+      <File FileName="Task1/Task1/ViewModels/EditUserViewModel.cs" Line="24" Column="1" />
+      <File FileName="Task1/Task1/Common/DataBase.cs" />
+      <File FileName="Task1/Task1.Android/Dependency/SQLite_Android.cs" />
+      <File FileName="Task1/Task1/ViewModels/RegistrationViewModel.cs" Line="25" Column="20" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Task1" expanded="True">
+            <Node name="Task1" expanded="True">
+              <Node name="Common" expanded="True" />
+              <Node name="CustomControl" expanded="True" />
+              <Node name="Interface" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="RegistrationViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="AllUser" expanded="True">
+                  <Node name="AllUser.xaml" expanded="True" />
+                </Node>
+                <Node name="EditUser" expanded="True">
+                  <Node name="EditUser.xaml" expanded="True" />
+                </Node>
+                <Node name="Registration" expanded="True" />
+                <Node name="UpdatePassword" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="Task1.Android" expanded="True">
+              <Node name="Dependency" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Task1.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D32B409E-4B2B-42B0-AC56-9B78BFE218C3" />
+  <MonoDevelop.Ide.ItemProperties.Task1.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+</Properties>

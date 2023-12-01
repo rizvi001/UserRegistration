@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodels="clr-namespace:Task1.ViewModels" xmlns:local="clr-namespace:Task1.CustomControl"
+    x:DataType="viewmodels:LogInViewModel"
+    ios:Page.UseSafeArea="true"
+    NavigationPage.HasNavigationBar="false"  
+    x:Class="Task1.Views.LogIn">
+    <ContentPage.Content>
+          
+        
+        
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Margin="20,0">
+                <!--Logo-->
+                <Grid Grid.Row="0"
+                      
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Image Source="VagaLogo"
+                               Margin="0,10"
+                        />
+                </Grid>
+
+                <!--login-->
+                <Grid Grid.Row="1"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Label Text="Login"
+                       TextColor="Black"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                    />
+                </Grid>
+
+                <!--Email entry-->
+                <Grid Grid.Row="2"
+                      RowDefinitions="Auto,Auto,Auto"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      Margin="0,20"
+                      >
+
+                    <StackLayout>
+
+                        <Frame
+                            Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               HasShadow="False"
+                               BorderColor="Gray"
+                               HeightRequest="40"
+                               WidthRequest="350"
+                               Margin="10,10"
+                               CornerRadius="10"
+                               Padding="0"
+                               >
+
+
+                            <Grid ColumnDefinitions="90*,10*"
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand"
+                                  >
+                                  
+
+                                <local:CustomEntry 
+                                  
+                                    Grid.Column="0"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Placeholder="Enter email"
+                                    BackgroundColor="Transparent"
+                                     Text="{Binding Email}"
+                                  
+                                   
+                                />
+
+                                <Image
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Grid.Column="1"
+                                    Source="email"
+                                />
+                            </Grid>
+
+                        </Frame>
+                         <!--Password entry-->
+                         <Frame
+                            Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               HasShadow="False"
+                               BorderColor="Gray"
+                               HeightRequest="40"
+                               WidthRequest="350"
+                               Margin="10,10"
+                               CornerRadius="10"
+                               Padding="0">
+
+
+                            <Grid ColumnDefinitions="90*,10*"
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand">
+
+                                <local:CustomEntry 
+                                   
+                                    Grid.Column="0"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Placeholder="Password"
+                                    BackgroundColor="Transparent"
+                                    Text="{Binding Password}"
+
+                              
+                                />
+
+                                <Image
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Grid.Column="1"
+                                    Source="CloseEye"
+                                />
+                            </Grid>
+
+                        </Frame>
+                        <!--Login button-->
+                        <Button
+                              Text="LogIn"
+                              FontSize="20"
+                              BackgroundColor="#FFC100"
+                              TextColor="Black"
+                              FontAttributes="Bold"
+                              HorizontalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand"
+                              WidthRequest="380"
+                              Margin="0,10"
+                              CornerRadius="10"
+                              Command="{Binding LoginCommand}"
+                              
+                        />
+
+
+
+                    </StackLayout>
+                    <!--Forgot password and rembere me-->
+                    <Grid
+                          Grid.Row="2"
+                          ColumnDefinitions="50*,50*"
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+
+                       <Grid ColumnDefinitions="Auto,Auto"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                             Grid.Column="0">
+
+                              <CheckBox
+                                  Color="Gray"
+                                  Grid.Column="0"
+                                  HorizontalOptions="Start"
+                                  VerticalOptions="Start"
+                                  WidthRequest="30"
+                                  
+                              />
+
+                              <Label Text="Remember me"
+                                     Grid.Column="1"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Center" 
+                              />
+                       </Grid>
+                               
+                               <Label
+                                   Grid.Column="1"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Text="Forgot Password?"
+                                   Margin="0,0,10,0"
+                                   TextDecorations="Underline"
+                               >
+
+                                    <Label.GestureRecognizers>
+
+                                       <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+
+
+                                   </Label.GestureRecognizers>
+                               </Label>
+
+                    </Grid>
+
+                    
+
+                </Grid>
+        
+                <!--SignUp or Registration Button-->
+                <Grid
+                    Grid.Row="4"
+                    Margin="0,10"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand">
+                    <Label
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="Don’t have an account? "
+                                    TextColor="Black" />
+                                <Span 
+                                   FontAttributes="Bold"
+                                   Text="SIGN UP"
+                                   TextColor="#EBB02D">
+                                   <Span.GestureRecognizers>
+                                       <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                                   </Span.GestureRecognizers> 
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Grid>
+
+       
+    </ContentPage.Content>
+    
+</ContentPage>
+

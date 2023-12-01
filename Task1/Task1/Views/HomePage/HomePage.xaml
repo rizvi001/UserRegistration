@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    x:Class="Task1.Views.HomePage.HomePage">
+    <ContentPage.Content>
+         <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              Margin="10,10">
+
+              <!--home-->
+              <Grid Grid.Row="0" >
+
+                    <ImageButton
+                        Source="MasterDetail.png"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="ImageButton_Clicked"
+                        BackgroundColor="Transparent"
+                    />
+
+                    <Label 
+                        Text="Home"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                    />
+              </Grid>
+
+
+
+             <Grid Grid.Row="1"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="Welcome "
+                                    TextColor="Black" />
+                                <Span 
+                                   FontAttributes="Bold"
+                               
+                                    Text="{Binding Name}"
+                                    TextColor="#EBB02D">
+                                   
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+             </Grid>
+
+              <Grid Grid.Row="2"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="ID: "
+                                    TextColor="Black" />
+                                <Span 
+                                   FontAttributes="Bold"
+                               
+                                    Text="{Binding ID}"
+                                    TextColor="#EBB02D">
+                                   
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+             </Grid>
+
+             
+
+         </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

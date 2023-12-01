@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Model\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Views\" />
+    <None Remove="Interface\" />
+    <None Remove="Views\LogIn\" />
+    <None Remove="Views\Registration\" />
+    <None Remove="CustomControl\" />
+    <None Remove="Helper\" />
+    <None Remove="Views\HomeTapped\" />
+    <None Remove="Views\HomePage\" />
+    <None Remove="Views\AllUser\" />
+    <None Remove="Views\ProfilePage\" />
+    <None Remove="Views\MasterDetail\" />
+    <None Remove="Views\ForgetPassword\" />
+    <None Remove="Views\UpdatePassword\" />
+    <None Remove="Views\SetNewPassword\" />
+    <None Remove="Views\EditUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Model\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Views\LogIn\" />
+    <Folder Include="Views\Registration\" />
+    <Folder Include="CustomControl\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Views\HomeTapped\" />
+    <Folder Include="Views\HomePage\" />
+    <Folder Include="Views\AllUser\" />
+    <Folder Include="Views\ProfilePage\" />
+    <Folder Include="Views\MasterDetail\" />
+    <Folder Include="Views\ForgetPassword\" />
+    <Folder Include="Views\UpdatePassword\" />
+    <Folder Include="Views\SetNewPassword\" />
+    <Folder Include="Views\EditUser\" />
+  </ItemGroup>
+</Project>

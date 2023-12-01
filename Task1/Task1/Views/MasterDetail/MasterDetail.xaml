@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local1="clr-namespace:Task1.Views.HomeTapped"
+   
+    x:Class="Task1.Views.MasterDetail.MasterDetail">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                     ios:Page.UseSafeArea="true">
+
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  RowDefinitions="Auto,Auto,Auto,Auto"
+                  Margin="10">
+               <StackLayout Margin="0,0,0,10">
+                    <Image
+                       Grid.Row="0"
+                       Source="profile1"
+                       Aspect="Fill"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                    />
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Text="{Binding Name}"
+                        FontSize="30"
+                    />
+               </StackLayout>
+
+                <Label Text="Home"
+                       Grid.Row="1"
+                       FontSize="18"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Margin="0,10">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                    </Label.GestureRecognizers>
+                
+                </Label>
+
+                <Label Text="All User"
+                       Grid.Row="2"
+                       FontSize="18"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Margin="0,10">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+
+                <Label Text="Profile"
+                       Grid.Row="3"
+                       FontSize="18"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Margin="0,10">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Label.GestureRecognizers>
+
+                </Label>
+
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <local1:HomeTapped/>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
+

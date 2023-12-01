@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "m6Td/0a5KTlJEu8vJNQURwRofeB0JD89wZrpeQlmcKtHd2Ytlmo1F2XvlwagejDK4MeeY+DwtCnzr2ymG5Tr/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AMAN ALI RIZVI\\OneDrive\\Desktop\\Task1\\Task1\\Task1\\Task1.iOS\\Task1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\btprogresshud\\1.3.5\\btprogresshud.1.3.5.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AMAN ALI RIZVI\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
